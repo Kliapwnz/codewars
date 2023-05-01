@@ -1,13 +1,15 @@
 //1. Создайте функцию, которая будет принимать массив элементов и функцию обратного вызова (callback), и для каждого элемента массива
 // будет применять функцию обратного вызова(функция вывода).
-const applyCallback = (array, callback) => {
-
+const applyCallback = (array, callBack) => {
+    array.forEach((el)=>{
+        callBack(el)
+    })
 }
 const callBack = (array) => {
     console.log(array)
 }
 const array = [1, 2, 3];
-applyCallback();
+applyCallback(array, callBack);
 
 
 //2 Напишите функцию, которая принимает массив чисел и функцию обратного (которая умножает каждый элемент массива на 2) вызова и возвращает новый массив, содержащий результат применения функции
