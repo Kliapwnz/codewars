@@ -14,15 +14,13 @@
 
 //2 Напишите функцию, которая принимает массив чисел и функцию обратного (которая умножает каждый элемент массива на 2) вызова и возвращает новый массив, содержащий результат применения функции
 // обратного вызова к каждому элементу исходного массива.
-const applyCallback = (array, callback) => {
-    return array.map(el => {
-        callback(el)
-    })
-}
+const applyCallback = (array, callback) => array.map(el => {
+        callback(el)}
+    )
+
 const array = [1, 2, 3];
-const callBack = (el) => {
-    return el * 2
-}
+const callBack = (el) => el * 2
+
 const callbackFunc = applyCallback(array, callBack); // что-то нужно прописать
 console.log(callbackFunc);// [2, 4, 6]
 
