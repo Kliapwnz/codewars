@@ -14,21 +14,25 @@
 
 //2 Напишите функцию, которая принимает массив чисел и функцию обратного (которая умножает каждый элемент массива на 2) вызова и возвращает новый массив, содержащий результат применения функции
 // обратного вызова к каждому элементу исходного массива.
-const applyCallback = (array, callback) => array.map(el =>
-    callback(el))
-
-const array = [1, 2, 3];
-const callBack = (el) => el * 2
-
-const callbackFunc = applyCallback(array, callBack); // что-то нужно прописать
-console.log(callbackFunc);// [2, 4, 6]
+// const applyCallback = (array, callback) => array.map(el =>
+//     callback(el))
+//
+// const array = [1, 2, 3];
+// const callBack = (el) => el * 2
+//
+// const callbackFunc = applyCallback(array, callBack); // что-то нужно прописать
+// console.log(callbackFunc);// [2, 4, 6]
 
 
 //3 Создайте функцию, которая принимает два числа и функцию обратного вызова, которая выполняет арифметическую операцию  сложения между ними.
-// const applyOperation = (x, y, operation) => {}
-// const add = ;
-// const result = applyOperation(2, 3, add);
-// console.log(result);
+const applyOperation = (x, y, operation) => {
+    return  operation(x, y)
+}
+const add = (x, y) => {
+    return x + y
+};
+const result = applyOperation(12, 5, add);
+console.log(result);
 
 
 // 4 Создайте функцию, которая принимает массив строк и функцию обратного вызова, которая фильтрует строки, если длинна строки меньше 7.
