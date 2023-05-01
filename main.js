@@ -1,23 +1,30 @@
 //1. Создайте функцию, которая будет принимать массив элементов и функцию обратного вызова (callback), и для каждого элемента массива
 // будет применять функцию обратного вызова(функция вывода).
-const applyCallback = (array, callBack) => {
-    array.forEach((el)=>{
-        callBack(el)
-    })
-}
-const callBack = (array) => {
-    console.log(array)
-}
-const array = [1, 2, 3];
-applyCallback(array, callBack);
+// const applyCallback = (array, callBack) => {
+//     array.forEach((el)=>{
+//         callBack(el)
+//     })
+// }
+// const callBack = (array) => {
+//     console.log(array)
+// }
+// const array = ["hello", true, 3];
+// applyCallback(array, callBack);
 
 
 //2 Напишите функцию, которая принимает массив чисел и функцию обратного (которая умножает каждый элемент массива на 2) вызова и возвращает новый массив, содержащий результат применения функции
 // обратного вызова к каждому элементу исходного массива.
-//const applyCallback = (array, callback) => {}
-//const array = [1, 2, 3];
-//const callbackFunc = applyCallback(); // что-то нужно прописать
-//console.log(callbackFunc);// [2, 4, 6]
+const applyCallback = (array, callback) => {
+    return array.map(el => {
+        callback(el)
+    })
+}
+const array = [1, 2, 3];
+const callBack = (el) => {
+    return el * 2
+}
+const callbackFunc = applyCallback(array, callBack); // что-то нужно прописать
+console.log(callbackFunc);// [2, 4, 6]
 
 
 //3 Создайте функцию, которая принимает два числа и функцию обратного вызова, которая выполняет арифметическую операцию  сложения между ними.
