@@ -37,7 +37,9 @@
 
 // 4 Создайте функцию, которая принимает массив строк и функцию обратного вызова, которая фильтрует строки, если длинна строки меньше 7.
 const filterStrings = (array, callback) => {
-    return  array.filter(el => {callback(el)})
+    return array.filter(el => {
+        callback(el)
+    })
 }
 const array = ['hello', 'world', 'javascript', 'callback'];
 const sortFunc = (el) => {
