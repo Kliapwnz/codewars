@@ -36,23 +36,31 @@
 
 
 // 4 Создайте функцию, которая принимает массив строк и функцию обратного вызова, которая фильтрует строки, если длинна строки меньше 7.
-const filterStrings = (array, callback) => {
-    return callback(array)
-}
-const array = ['hello', 'world', 'javascript', 'callback'];
-const sortFunc = (el) => {
-    return el.filter(a => a.length < 7)
-}//написать функцию
-const filtered = filterStrings(array, sortFunc); // что- добавить
-console.log(filtered);
+// const filterStrings = (array, callback) => {
+//     return callback(array)
+// }
+// const array = ['hello', 'world', 'javascript', 'callback'];
+// const sortFunc = (el) => {
+//     return el.filter(a => a.length < 7)
+// }//написать функцию
+// const filtered = filterStrings(array, sortFunc); // что- добавить
+// console.log(filtered);
 
 
 //5 Напишите функцию, которая принимает два массива и функцию обратного вызова, которая складывает элементы двух массивов.
-//const zipArrays = (array1, array2, callback) => {}
-//const array1 = [1, 2, 3];
-//const array2 = [4, 5, 6];
-//const zippedFunc = ;//написать функцию
-//console.log(zipArrays(array1, array2, zippedFunc))
+const zipArrays = (array1, array2, callback) => {
+    return callback(array1, array2)
+}
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const zippedFunc = (array1, array2) => {
+    let result = []
+    for (let i = 0; i < array1.length; i++) {
+        result.push(array1[i] + array2[i])
+    }
+    return result
+};//написать функцию
+console.log(zipArrays(array1, array2, zippedFunc))
 
 
 //6 Создайте функцию, которая принимает массив объектов и функцию обратного вызова, которая возвращает массив значений свойства age.
