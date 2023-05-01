@@ -25,22 +25,26 @@
 
 
 //3 Создайте функцию, которая принимает два числа и функцию обратного вызова, которая выполняет арифметическую операцию  сложения между ними.
-const applyOperation = (x, y, operation) => {
-    return  operation(x, y)
-}
-const add = (x, y) => {
-    return x + y
-};
-const result = applyOperation(12, 5, add);
-console.log(result);
+// const applyOperation = (x, y, operation) => {
+//     return  operation(x, y)
+// }
+// const add = (x, y) => {
+//     return x + y
+// };
+// const result = applyOperation(12, 5, add);
+// console.log(result);
 
 
 // 4 Создайте функцию, которая принимает массив строк и функцию обратного вызова, которая фильтрует строки, если длинна строки меньше 7.
-//const filterStrings = (array, callback) => {}
-//const array = ['hello', 'world', 'javascript', 'callback'];
-//const sortFunc = //написать функцию
-//const filtered = filterStrings(array, sortFunc); // что- добавить
-//console.log(filtered);
+const filterStrings = (array, callback) => {
+    return  array.filter(el => {callback(el)})
+}
+const array = ['hello', 'world', 'javascript', 'callback'];
+const sortFunc = (el) => {
+    return el.length < 7
+}//написать функцию
+const filtered = filterStrings(array, sortFunc); // что- добавить
+console.log(filtered);
 
 
 //5 Напишите функцию, которая принимает два массива и функцию обратного вызова, которая складывает элементы двух массивов.
