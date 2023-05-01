@@ -3,12 +3,11 @@
 const applyCallback = (array, callback) => {
 
 }
-const callBack=()=>{
-
+const callBack = (array) => {
+    console.log(array)
 }
 const array = [1, 2, 3];
 applyCallback();
-
 
 
 //2 Напишите функцию, которая принимает массив чисел и функцию обратного (которая умножает каждый элемент массива на 2) вызова и возвращает новый массив, содержащий результат применения функции
@@ -19,16 +18,11 @@ applyCallback();
 //console.log(callbackFunc);// [2, 4, 6]
 
 
-
-
-
 //3 Создайте функцию, которая принимает два числа и функцию обратного вызова, которая выполняет арифметическую операцию  сложения между ними.
 // const applyOperation = (x, y, operation) => {}
 // const add = ;
 // const result = applyOperation(2, 3, add);
 // console.log(result);
-
-
 
 
 // 4 Создайте функцию, которая принимает массив строк и функцию обратного вызова, которая фильтрует строки, если длинна строки меньше 7.
@@ -39,16 +33,12 @@ applyCallback();
 //console.log(filtered);
 
 
-
-
 //5 Напишите функцию, которая принимает два массива и функцию обратного вызова, которая складывает элементы двух массивов.
 //const zipArrays = (array1, array2, callback) => {}
 //const array1 = [1, 2, 3];
 //const array2 = [4, 5, 6];
 //const zippedFunc = ;//написать функцию
 //console.log(zipArrays(array1, array2, zippedFunc))
-
-
 
 
 //6 Создайте функцию, которая принимает массив объектов и функцию обратного вызова, которая возвращает массив значений свойства age.
@@ -61,16 +51,10 @@ applyCallback();
 // console.log(pluck(people, 'age'));
 
 
-
-
-
 // 7. Создать функцию которая будет проверять является ли строка полиндромом
 //Палиндро́м — число, буквосочетание, слово или текст, одинаково читающееся в обоих направлениях.
 // const isPolindrom = (word) => {}
 // console.log(isPolindrom("шабаш"))
-
-
-
 
 
 // 8. Вывести самое короткое слово в консоль
@@ -78,20 +62,14 @@ applyCallback();
 // console.log(findShort('The smallest word in sentence'))
 
 
-
-
 // 9. Вывести в консоль инициалы (Александр Петров - А.В.)
 //const toInitials = (name) = {}
 // console.log(toInitials("Bill gates"))
 
 
-
-
 // 10. Создание дубликатов символов строки ("abcd") => "A-Bb-Ccc-Dddd"
 // const duplicate = (str) => {}
 // console.log(duplicate('abcd'));
-
-
 
 
 // 11. Отформатировать цифры в телефонный номер (123456789) => (123) 456-789
