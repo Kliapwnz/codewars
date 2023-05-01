@@ -48,29 +48,35 @@
 
 
 //5 Напишите функцию, которая принимает два массива и функцию обратного вызова, которая складывает элементы двух массивов.
-const zipArrays = (array1, array2, callback) => {
-    return callback(array1, array2)
-}
-const array1 = [1, 2, 3];
-const array2 = [4, 5, 6];
-const zippedFunc = (array1, array2) => {
-    let result = []
-    for (let i = 0; i < array1.length; i++) {
-        result.push(array1[i] + array2[i])
-    }
-    return result
-};//написать функцию
-console.log(zipArrays(array1, array2, zippedFunc))
+// const zipArrays = (array1, array2, callback) => {
+//     return callback(array1, array2)
+// }
+// const array1 = [1, 2, 3];
+// const array2 = [4, 5, 6];
+// const zippedFunc = (array1, array2) => {
+//     let result = []
+//     for (let i = 0; i < array1.length; i++) {
+//         result.push(array1[i] + array2[i])
+//     }
+//     return result
+// };//написать функцию
+// console.log(zipArrays(array1, array2, zippedFunc))
 
 
 //6 Создайте функцию, которая принимает массив объектов и функцию обратного вызова, которая возвращает массив значений свойства age.
-// const pluck = (array, property) => {}
-// const people = [
-//     { name: 'John', age: 25 },
-//     { name: 'Jane', age: 30 },
-//     { name: 'Bob', age: 20 }
-// ];
-// console.log(pluck(people, 'age'));
+const pluck = (array, property) => {
+    return array.map(e=> e[property])
+}
+const people = [
+    {name: 'John', age: 25},
+    {name: 'Jane', age: 30},
+    {name: 'Bob', age: 20}
+];
+
+// const callBack = (array) => {
+//     return array.map(e => e.age)
+// }
+console.log(pluck(people, 'age'));
 
 
 // 7. Создать функцию которая будет проверять является ли строка полиндромом
