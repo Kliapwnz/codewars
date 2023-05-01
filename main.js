@@ -41,7 +41,7 @@ const filterStrings = (array, callback) => {
 }
 const array = ['hello', 'world', 'javascript', 'callback'];
 const sortFunc = (el) => {
-    return el.filter(a => a.length <7)
+    return el.filter(a => a.length < 7)
 }//написать функцию
 const filtered = filterStrings(array, sortFunc); // что- добавить
 console.log(filtered);
